@@ -62,7 +62,7 @@
   }
 
   .grid-item#foot {
-    background-image: url('/frontend/images/foot.jpg');
+    background-image: url('/frontend/images/foot1.jpg');
     background-size: cover;
     background-position: center 40%;
   }
