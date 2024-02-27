@@ -1,0 +1,560 @@
+/*
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  background:#fafafa;
+  color:#1e1e1e;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.header {
+  width: 100%;
+}
+
+header {
+  height: 0px;
+  display: flex;
+  align-items:flex-start;
+}
+
+.logo {
+  width: 15vw;
+  width: 150px;
+  margin-bottom: -9vw;
+  margin-bottom: -75px;
+  z-index: 99;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transform:scale(1.03);
+}
+
+
+.content .background-image {
+  position: relative;
+  height: max-content; /* Set a fixed height or use another property to determine its size */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#menu-2-container {
+  width: 55vw;
+  height: 45px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-weight: 450;
+}
+
+.menu-2-item {
+  width: 20%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 15px;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.menu-2-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px; /* Adjust padding to align text */
+  color: black;
+  text-decoration: none;
+}
+
+.menu-2-item:hover {
+  background-color: white;
+  opacity: 0.95;
+  transform: scale(1.04);
+}
+
+.menu-2-item:hover a {
+  color: black;
+}
+
+.menu-2-item a:visited {
+  color: black;
+}
+
+@media (max-width: 900px) {
+  #menu-2-container {
+    display: none;
+  }
+}
+
+
+
+
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*/ #menuToggle a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.5s ease;
+}
+
+#menuToggle a:hover {
+  color: rgb(121, 121, 121);
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger */
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #e2e2e2;
+  border-radius: 3px;
+  border-color: #1e1e1e;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+    * But let's hide the middle one.
+    */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+    * Oh yeah and the last one should go the other direction
+    */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+#menu {
+  position: absolute;
+  width: 300px;
+  height: 700px;
+  margin: -100px 0 0 -220px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+    * And let's slide it in from the left
+    */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+@media (min-width: 900px) {
+  #menuToggle {
+    display: none;
+  }
+  #menu {
+    display: none;
+  }
+}
+
+.content section {
+  position: relative;
+  padding: 20px;
+}
+
+.parallax-photo {
+  /* Simple parallax effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh; /* Adjust the height as needed */
+  /* Add specific background images for each parallax section if necessary */
+}
+
+.parallax-photo.first-image {
+    background-image: url('/frontend/images/sunset.jpg');
+}
+
+.parallax-photo.second-image {
+    background-image: url('/frontend/images/lily.jpg');
+}
+
+.grid-container {
+  width: 100vw;
+  height: 32vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10px 0 10px 0;
+  gap: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(223, 248, 255) !important;
+  color: rgb(248, 248, 248);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 23px;
+  text-shadow: 1px 1px 0 #151515,  
+  1px 1px 0 #151515,
+  1px 1px 0 #151515,
+  1px 1px 0 #151515;
+}
+
+.grid-item:hover {
+  transform: scale(1.03);
+  box-shadow: 6px 3px 10px rgba(0, 13, 16, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    height: 85vh;
+  }
+  .grid-item {
+    width: 100%
+  }
+}
+
+.grid-item#foot {
+  background-image: url('/frontend/images/foot1.jpg');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.grid-item#stone {
+  background-image: url('/frontend/images/stone.jpg');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.grid-item#chair {
+  background-image: url('/frontend/images/pregnancy.jpg');
+  background-size: cover;
+  background-position: center 80%;
+}
+
+.grid-item#pregnancy {
+  background-image: url('/frontend/images/rates.jpg');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.grid-item#acupressure {
+  background-image: url('/frontend/images/acupressure.jpg');
+  background-size: cover;
+  background-position: center 45%;
+}
+
+.grid-item#couple {
+  background-image: url('/frontend/images/couples.jpg');
+  background-size: cover;
+  background-position: center 60%;
+}
+
+
+.footer-info {
+  background: #f3f3f3;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.footer-info section {
+  margin-bottom: 20px;
+}
+
+#footer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.footer-grid-item {
+  text-align: center;
+}
+
+.footer-contact, .footer-hours {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #footer-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .footer-contact, .footer-hours {
+    text-align: center;
+  }
+}
+
+#map {
+  width:75%;
+  height: 87%; 
+  border: 1px dashed black;
+  border-radius: 25px;
+  margin: 20px;
+  margin-top: -5px;
+  background-color: #f3f3f3;
+}
+
+#hours {
+  list-style-type: none;
+}
+
+#copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 20px 20px 20px 20px;
+  margin: 20px;
+  background-color: #f3f3f3;
+}
+
+
+
+
+
+
+
+
+
+
+
+#product-description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 high, 2 wide */
+  grid-template-rows: auto auto; /* height set automatically */
+  gap: 20px; /* space between grid items */
+  justify-content: space-around; /* this will space out the grid items */
+  width: 100%;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.product-item {
+  /* additional styles if needed */
+  height: 80%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Smaller screen: 2 high and 1 wide */
+@media (max-width: 900px) {
+  #product-description-wrapper {
+      grid-template-columns: 1fr; /* 2 high, 1 wide */
+      grid-template-rows: auto auto; /* explicit two rows */
+  }
+}
+
+#jessie-item-1-product-description {
+  font-size: 40px;
+  width: 100%;
+  align-content: center;
+  justify-self: center;
+}
+
+#product-paragraph {
+  margin-top: 70px;
+  font-size: 16px;
+  width: 90%;
+}
+
+/* Style adjustments for buttons and other elements if needed */
+
+.carousel {
+  text-align: center;
+}
+
+.carousel-images {
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-image {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(67, 67, 67, 0.2), 0 6px 20px 0 rgba(67, 67, 67, 0.19); /* Multi-layered shadow for depth */
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail {
+  max-width: 70px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.6;
+  margin: 0 5px;
+  transition: opacity 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(67, 67, 67, 0.2), 0 6px 20px 0 rgba(67, 67, 67, 0.19); /* Multi-layered shadow for depth */
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px; /* Arrow size can be adjusted */
+  height: 40px; /* Arrow size can be adjusted */
+  margin-top: -20px; /* Half of height to center vertically */
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  transition: background-color 0.2s ease, opacity 0.35s ease;
+  border-radius: 50%;
+  background-color: #656565; /* Light grey background */
+  text-align: center;
+  line-height: 40px; /* To vertically align the arrow symbol, should match the height */
+  opacity: 0.5; /* Starting opacity */
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+
+#prev {
+  left: 10px; /* Adjust as necessary to position inside the main image */
+}
+
+#next {
+  right: 10px; /* Adjust as necessary to position inside the main image */
+}
+
+.arrow:hover {
+  background-color: #676767; /* Darker grey on hover */
+  opacity: 0.8; /* Full opacity on hover */
+}
+
+#main-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes bottom margin/whitespace */
+}
+
+.grid-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: rgb(248, 248, 248) !important;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* Optional: removes the underline from links */
+  color: inherit; /* Optional: ensures the link color is inherited from the parent */
+}
+

@@ -1,0 +1,142 @@
+.grid-container {
+    width: 100vw;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px 0 10px 0;
+    gap: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+@media screen and (max-width: 900px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      height: 90vh;
+    }
+    .grid-item {
+      width: 100%
+    }
+  }
+
+  .opaque-rectangle {
+    color: rgb(20, 20, 20);
+    background: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    border-radius: inherit; /* This will take the border-radius from the parent .grid-item */
+    width: 85%;
+    height: 80%;
+    position: absolute; /* Position it relative to the parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     text-shadow: 2px 2px 0 #151515,  
+  2px 2px 0 #151515,
+  2px 2px 0 #151515,
+  2px 2px 0 #151515; */
+  }
+
+  .grid-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(223, 248, 255);
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor:default;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 23px;
+    text-shadow: none;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.03);
+    box-shadow: 6px 3px 10px rgba(0, 90, 110, 0.2);
+  }
+
+  .grid-item#foot {
+    background-image: url('/frontend/images/foot.jpg');
+    background-size: cover;
+    background-position: center 40%;
+  }
+  
+  .grid-item#stone {
+    background-image: url('/frontend/images/stone.jpg');
+    background-size: cover;
+    background-position: center 40%;
+  }
+  
+  .grid-item#chair {
+    background-image: url('/frontend/images/body.jpg');
+    background-size: cover;
+    background-position: center 80%;
+  }
+  
+  .grid-item#pregnancy {
+    background-image: url('/frontend/images/rates.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    text-shadow: 1px 1px 0 #ececec,  
+  1px 1px 0 #ececec,
+  1px 1px 0 #ececec,
+  1px 1px 0 #ececec;
+  }
+  
+  .grid-item#acupressure {
+    background-image: url('/frontend/images/chair2.jpg');
+    background-size: cover;
+    background-position: center 45%;
+    text-shadow: 1px 1px 0 #ececec,  
+    1px 1px 0 #ececec,
+    1px 1px 0 #ececec,
+    1px 1px 0 #ececec;
+  }
+  
+  .grid-item#couple {
+    background-image: url('/frontend/images/body1.jpg');
+    background-size: cover;
+    background-position: center 60%;
+    text-shadow: 1px 1px 0 #ececec,  
+    1px 1px 0 #ececec,
+    1px 1px 0 #ececec,
+    1px 1px 0 #ececec;
+  }
+
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align:center;
+    font-size: larger;
+    font-weight: 400;
+    color: rgb(52, 52, 52);
+    line-height: 0.5;
+    white-space: nowrap;
+/*     text-shadow: 4px 4px 0 #151515,  
+    4px 4px 7px  #151515,
+    4px 4px 0 #151515,
+    1px 1px 0 #151515; */
+    }
+  
+  .service-list p {
+    width: 48%; /* Adjust the width as needed */
+  }
+
+.footer-hours {
+  font-size: 15px;
+}
+
+.parallax-photo.first-image {
+  background-image: url('/frontend/images/wave.jpg');
+}
+
+.parallax-photo.second-image {
+  background-image: url('/frontend/images/coast.jpg');
+}
