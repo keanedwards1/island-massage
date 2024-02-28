@@ -266,23 +266,25 @@ header {
 .parallax-photo.first-image {
   background-image: url('/frontend/images/sunset.jpg');
   background-size: cover;
-  background-position: center; /* Adjusts the focal point of the image */
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .parallax-photo.second-image {
   background-image: url('/frontend/images/lily.jpg');
   background-size: cover;
-  background-position: center; /* Adjusts the focal point of the image */
+  background-attachment: fixed;
+  background-position: center;
 }
 
-/* Media query for devices with a max-width of 768px (typical breakpoint for tablets and down) */
-/* @media (max-width: 675px) {
+/* Media query for devices with a max-width of 768px */
+/* @media (max-width: 768px) {
   .parallax-photo.first-image, .parallax-photo.second-image {
-      background-attachment: scroll;
-      background-size: contain; 
-      background-repeat: no-repeat; 
+      background-attachment: scroll; 
+      background-position: center center; 
   }
 } */
+
 
 .grid-container {
   width: 100vw;
