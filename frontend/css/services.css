@@ -158,10 +158,10 @@
 }
 
 /* Media query for devices with a max-width of 768px (typical breakpoint for tablets and down) */
-@media (max-width: 768px) {
+@media (max-width: 675px) {
   .parallax-photo.first-image, .parallax-photo.second-image {
-      background-attachment: scroll; /* Optional: Adjust if you want to disable fixed background on mobile */
-      background-size: contain; /* Changes the scaling to make sure the entire image fits */
-      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-attachment: scroll; 
+      background-size: contain; 
+      background-repeat: no-repeat; 
   }
 }
