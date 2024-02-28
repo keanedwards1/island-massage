@@ -54,12 +54,16 @@ header {
 
 .content .background-image {
   position: relative;
-  height: max-content; /* Set a fixed height or use another property to determine its size */
   width: 100%;
+  padding-top: 56.25%; /* This maintains a 16:9 aspect ratio */
+  background-image: url('/frontend/images/field.jpg');
+  background-size: cover; /* Cover ensures the background covers the area without distortion */
+  background-position: center; /* Centers the background image */
   top: 0;
   left: 0;
   z-index: 0;
 }
+
 
 #menu-2-container {
   width: 55vw;
