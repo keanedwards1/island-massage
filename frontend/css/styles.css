@@ -262,6 +262,10 @@ header {
   padding: 20px;
 }
 
+#writing {
+  margin-top: -100px;
+}
+
 .parallax-photo {
   /* Simple parallax effect */
   background-attachment: fixed;
@@ -396,30 +400,30 @@ header {
   top: 50%;
   transform: translateY(-50%);
   width: auto;
-  padding: 16px;
+  padding: 7px;
   color: #fff;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 3px;
+  border-radius: 7px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #3e5894; /* Ensure buttons are visible */
+  background-color: #2560e8; /* Ensure buttons are visible */
   opacity: 0.6; /* Slightly transparent for modern look */
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 7px 0 0 7px;
 }
 
 /* Position the "prev button" to the left */
 .prev {
   left: 0;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 7px 7px 0;
 }
 
 /* Show the buttons on hover */
