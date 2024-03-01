@@ -28,22 +28,26 @@ body {
 
 .header {
   width: 100%;
+  
 }
 
 header {
-  height: 0px;
   display: flex;
-  align-items:flex-start;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .logo {
   width: 15vw;
   width: 200px;
-  margin-bottom: -9vw;
-  margin-bottom: -75px;
+  margin: 0 auto;
   z-index: 99;
   position: relative;
   transition: transform 0.3s ease;
+  margin-left: 0px;
+  top: 5px;
+  left: 5px;
 }
 
 .logo:hover {
@@ -59,7 +63,7 @@ header {
   background-image: url('/frontend/images/field.jpg');
   background-size: cover; /* Cover ensures the background covers the area without distortion */
   background-position: center; /* Centers the background image */
-  top: 0;
+  top: -108px;
   left: 0;
   z-index: 0;
 }
@@ -116,6 +120,11 @@ header {
 }
 
 @media (max-width: 900px) {
+  .logo {
+    margin-bottom: 0;
+    z-index: 1;
+    margin: 0 auto;
+  }
   #menu-2-container {
     display: none;
   }
@@ -366,6 +375,110 @@ header {
   background-position: center 60%;
 }
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for modern effect */
+  border-radius: 4px; /* Rounded corners for modern effect */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next and previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #3e5894; /* Ensure buttons are visible */
+  opacity: 0.6; /* Slightly transparent for modern look */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Show the buttons on hover */
+.prev:hover, .next:hover {
+  opacity: 0.8;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Caption background */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ececec;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #769bc8;
+}
+
+/* Fading animation */
+/* .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: .8}
+} */
+
+/* Responsive layout - makes the slideshow container fit in the screen */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {font-size: 11px}
+}
 
 .footer-info {
   background: #f3f3f3;
@@ -392,6 +505,10 @@ header {
 
 .footer-contact, .footer-hours {
   text-align: center;
+}
+
+.footer-contact h2 {
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 768px) {
