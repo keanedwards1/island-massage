@@ -28,7 +28,6 @@ body {
 
 .header {
   width: 100%;
-  
 }
 
 header {
@@ -174,7 +173,7 @@ header {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #e2e2e2;
+  background: #cdcdcd;
   border-radius: 3px;
   border-color: #1e1e1e;
   z-index: 1;
@@ -694,5 +693,64 @@ header {
   align-items: center;
   text-decoration: none; /* Optional: removes the underline from links */
   color: inherit; /* Optional: ensures the link color is inherited from the parent */
+}
+
+
+#service-descriptions {
+  margin-top: 20px;
+}
+
+.service-description {
+  margin-bottom: 20px;
+}
+
+.service-description h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.service-description p {
+  font-size: 1em;
+  color: #666;
+}
+
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+  gap: 20px; /* Space between columns and rows */
+  max-width: 1200px; /* Maximum width of the grid */
+  margin: auto; /* Centers the grid in the parent element */
+}
+
+.service-description {
+  background-color: #fff; /* White background for each service */
+  padding: 20px; /* Padding inside each service box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.service-description h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+text-align: center;
+}
+
+
+.service-description p {
+  font-size: 1em;
+  color: #666;
+  text-align: center;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* One column on smaller screens */
+  }
+  .service-description {
+    margin: 0 30px 0 30px;
+  }
 }
 
