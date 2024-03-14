@@ -1,5 +1,5 @@
 .content .background-image {
-  background-image: url('/frontend/images/deep-blue-waves.jpg');
+  background-image: url('/frontend/images/deep-blue-waves.webp');
 }
 
 .grid-container {
@@ -73,25 +73,25 @@
   }
 
   .grid-item#foot {
-    background-image: url('/frontend/images/foot1.jpg');
+    background-image: url('/frontend/images/foot1.webp');
     background-size: cover;
     background-position: center 40%;
   }
   
   .grid-item#stone {
-    background-image: url('/frontend/images/stone.jpg');
+    background-image: url('/frontend/images/stone.webp');
     background-size: cover;
     background-position: center 40%;
   }
   
   .grid-item#chair {
-    background-image: url('/frontend/images/body.jpg');
+    background-image: url('/frontend/images/body.webp');
     background-size: cover;
     background-position: center 80%;
   }
   
   .grid-item#pregnancy {
-    background-image: url('/frontend/images/rates.jpg');
+    background-image: url('/frontend/images/rates.webp');
     background-size: cover;
     background-position: center 40%;
     text-shadow: 1px 1px 0 #ececec,  
@@ -116,7 +116,7 @@
   }
   
   .grid-item#acupressure {
-    background-image: url('/frontend/images/chair2.jpg');
+    background-image: url('/frontend/images/chair2.webp');
     background-size: cover;
     background-position: center 45%;
     text-shadow: 1px 1px 0 #ececec,  
@@ -126,7 +126,7 @@
   }
   
   .grid-item#couple {
-    background-image: url('/frontend/images/body1.jpg');
+    background-image: url('/frontend/images/body1.webp');
     background-size: cover;
     background-position: center 60%;
     text-shadow: 1px 1px 0 #ececec,  
@@ -162,13 +162,13 @@
 }
 
 .parallax-photo.first-image {
-  background-image: url('/frontend/images/wave.jpg');
+  background-image: url('/frontend/images/wave.webp');
   background-size: cover;
   background-position: center; /* Adjusts the focal point of the image */
 }
 
 .parallax-photo.second-image {
-  background-image: url('/frontend/images/coast.jpg');
+  background-image: url('/frontend/images/coast.webp');
   background-size: cover;
   background-position: center; /* Adjusts the focal point of the image */
 }

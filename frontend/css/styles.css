@@ -59,7 +59,7 @@ header {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* This maintains a 16:9 aspect ratio */
-  background-image: url('/frontend/images/field.jpg');
+  background-image: url('/frontend/images/field.webp');
   background-size: cover; /* Cover ensures the background covers the area without distortion */
   background-position: center; /* Centers the background image */
   top: -108px;
@@ -276,13 +276,13 @@ header {
 }
 
 .parallax-photo.first-image {
-  background-image: url('/frontend/images/sunset.jpg');
+  background-image: url('/frontend/images/sunset.webp');
   background-size: cover;
   background-position: center; /* Adjusts the focal point of the image */
 }
 
 .parallax-photo.second-image {
-  background-image: url('/frontend/images/lily.jpg');
+  background-image: url('/frontend/images/lily.webp');
   background-size: cover;
   background-position: center; /* Adjusts the focal point of the image */
 }
@@ -343,37 +343,37 @@ header {
 }
 
 .grid-item#foot {
-  background-image: url('/frontend/images/foot1.jpg');
+  background-image: url('/frontend/images/foot1.webp');
   background-size: cover;
   background-position: center 40%;
 }
 
 .grid-item#stone {
-  background-image: url('/frontend/images/stone.jpg');
+  background-image: url('/frontend/images/stone.webp');
   background-size: cover;
   background-position: center 40%;
 }
 
 .grid-item#chair {
-  background-image: url('/frontend/images/pregnancy.jpg');
+  background-image: url('/frontend/images/pregnancy.webp');
   background-size: cover;
   background-position: center 80%;
 }
 
 .grid-item#pregnancy {
-  background-image: url('/frontend/images/rates.jpg');
+  background-image: url('/frontend/images/rates.webp');
   background-size: cover;
   background-position: center 40%;
 }
 
 .grid-item#acupressure {
-  background-image: url('/frontend/images/acupressure.jpg');
+  background-image: url('/frontend/images/acupressure.webp');
   background-size: cover;
   background-position: center 45%;
 }
 
 .grid-item#couple {
-  background-image: url('/frontend/images/couples.jpg');
+  background-image: url('/frontend/images/couples.webp');
   background-size: cover;
   background-position: center 60%;
 }
